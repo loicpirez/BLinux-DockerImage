@@ -33,5 +33,5 @@ RUN make -C /usr/src/minilibx clean
 ADD .bashrc /etc/skel/.bashrc
 ADD bugs /usr/bin/bugs
 
-WORKDIR /rendu
 VOLUME ["/rendu"]
+WORKDIR /rendu
