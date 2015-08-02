@@ -23,9 +23,15 @@ RUN zypper -n install \
     valgrind          \
     zip unzip
 
+RUN zypper -n install \
+    emacs git
+
 ADD minilibx /usr/src/minilibx
 RUN make -C /usr/src/minilibx install
 RUN make -C /usr/src/minilibx clean
 
 ADD .bashrc /etc/skel/.bashrc
 ADD bugs /usr/bin/bugs
+
+WORKDIR /rendu
+VOLUME ["/rendu"]
