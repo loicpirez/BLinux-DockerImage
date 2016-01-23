@@ -10,3 +10,6 @@ RUN useradd -md /home/bill bill
 USER bill
 WORKDIR /home/bill/workspace
 ENTRYPOINT exec /bin/bash
+
+VOLUME ["/workspace"]
+WORKDIR ~/rendu
